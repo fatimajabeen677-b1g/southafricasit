@@ -1,5 +1,11 @@
 # robots.txt for IPTV South Africa
+# Allow all crawlers to index the site
 User-agent: *
 Allow: /
 
+# Block admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
 Sitemap: https://iptvsa.co.za/sitemap.xml
