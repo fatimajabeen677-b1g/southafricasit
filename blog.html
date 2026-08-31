@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPTV South Africa Blog — News, Guides & Tips</title>
+    <meta name="description" content="Read the latest IPTV news, setup guides, and tips for IPTV South Africa subscribers. Stay updated with the best IPTV content." />
+    <link rel="canonical" href="https://iptvsa.co.za/blog" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        .blog-hero {
+            padding: 140px 0 60px;
+            background: #0a0a0a;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+            text-align: center;
+        }
+        .blog-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        .blog-hero h1 span {
+            color: #f7d44a;
+        }
+        .blog-hero p {
+            color: #94a3b8;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-grid {
+            padding: 60px 0;
+            background: #0f0f0f;
+        }
+        .blog-grid__inner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .blog-post {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 28px 24px;
+            transition: all 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: translateY(-6px);
+            border-color: #f7d44a;
+            box-shadow: 0 12px 40px rgba(247, 212, 74, 0.06);
+        }
+        .blog-post .post-tag {
+            display: inline-block;
+            background: rgba(247, 212, 74, 0.12);
+            color: #f7d44a;
+            padding: 2px 14px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .blog-post h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .blog-post p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .blog-post .post-meta {
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+        .blog-post .post-meta i {
+            color: #f7d44a;
+            margin-right: 4px;
+        }
+        .blog-post .read-more {
+            color: #f7d44a;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .blog-post .read-more:hover {
+            color: #ffffff;
+        }
+        .blog-post .read-more i {
+            transition: transform 0.3s ease;
+        }
+        .blog-post .read-more:hover i {
+            transform: translateX(4px);
+        }
+        @media (max-width: 992px) {
+            .blog-grid__inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 576px) {
+            .blog-grid__inner {
+                grid-template-columns: 1fr;
+            }
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================================================================
+    HEADER
+    ================================================================ -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="flag-icon">🇿🇦</span>
+                <span>IPTV South Africa</span>
+            </a>
+            <nav class="nav" id="mainNav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="reseller.html" class="nav__link">Reseller</a></li>
+                    <li><a href="blog.html" class="nav__link active">Blog</a></li>
+                    <li><a href="index.html#pricing" class="nav__link">Pricing</a></li>
+                    <li><a href="index.html#testimonials" class="nav__link">Reviews</a></li>
+                    <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="#" class="btn btn--yellow-outline btn--sm">Login</a>
+                <a href="https://wa.me/923020548889" target="_blank" class="btn btn--green btn--sm"><i class="fab fa-whatsapp"></i> Subscribe</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================================================================
+    BLOG HERO
+    ================================================================ -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>IPTV South Africa <span>Blog</span></h1>
+            <p>Stay updated with the latest IPTV news, setup guides, and tips for South African subscribers.</p>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    BLOG GRID
+    ================================================================ -->
+    <section class="blog-grid">
+        <div class="container">
+            <div class="blog-grid__inner">
+
+                <!-- Post 1 -->
+                <div class="blog-post">
+                    <span class="post-tag">Guide</span>
+                    <h3>How to Set Up IPTV on Firestick in South Africa</h3>
+                    <p>Step-by-step guide to install IPTV on your Amazon Firestick. Watch live TV in minutes with our simple setup process.</p>
+                    <div class="post-meta"><i class="fas fa-calendar-alt"></i> August 31, 2026</div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="blog-post">
+                    <span class="post-tag">Comparison</span>
+                    <h3>IPTV vs DSTV: Which is Better in 2026?</h3>
+                    <p>Compare IPTV and DSTV side by side. Pricing, channels, quality, and value — find out which is the best choice for you.</p>
+                    <div class="post-meta"><i class="fas fa-calendar-alt"></i> August 30, 2026</div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="blog-post">
+                    <span class="post-tag">Tips</span>
+                    <h3>Best Internet Speed for IPTV Streaming in South Africa</h3>
+                    <p>Find out the internet speed you need for buffer-free IPTV streaming in 4K and HD quality.</p>
+                    <div class="post-meta"><i class="fas fa-calendar-alt"></i> August 28, 2026</div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="blog-post">
+                    <span class="post-tag">Guide</span>
+                    <h3>How to Install IPTV on Smart TV (Samsung, LG, Hisense)</h3>
+                    <p>Learn how to set up IPTV on your Smart TV. Step-by-step instructions for Samsung, LG, and Hisense TVs.</p>
+                    <div class="post-meta"><i class="fas fa-calendar-alt"></i> August 25, 2026</div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="blog-post">
+                    <span class="post-tag">Sports</span>
+                    <h3>Best IPTV Channels for South African Sports Fans</h3>
+                    <p>Discover the best IPTV channels for South African sports fans. Football, rugby, cricket, and more.</p>
+                    <div class="post-meta"><i class="fas fa-calendar-alt"></i> August 22, 2026</div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="blog-post">
+                    <span class="post-tag">News</span>
+                    <h3>IPTV South Africa Reaches 8,000+ Subscribers</h3>
+                    <p>We're proud to announce that IPTV South Africa has crossed 8,000 active subscribers. Thank you for your trust!</p>
+                    <div class="post-meta"><i class="fas fa-calendar-alt"></i> August 20, 2026</div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    CTA - BLOG
+    ================================================================ -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Watching?</h2>
+            <p>Join 8,000+ happy subscribers. Get your IPTV South Africa subscription today.</p>
+            <a href="https://wa.me/923020548889" target="_blank" class="btn btn--yellow btn--large"><i class="fab fa-whatsapp"></i> Subscribe Now</a>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    FOOTER
+    ================================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="index.html" class="logo"><span class="flag-icon">🇿🇦</span><span>IPTV South Africa</span></a>
+                    <p>Premium IPTV South Africa subscription with 30,000+ channels, 4K quality, and local support. The best IPTV streaming service in South Africa.</p>
+                    <div class="footer__social">
+                        <a href="https://wa.me/923020548889" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="reseller.html">Reseller</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#testimonials">Reviews</a></li></ul></div>
+                <div class="footer__links"><h4>Support</h4><ul><li><a href="index.html#faq">FAQ</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Setup Guide</a></li></ul></div>
+                <div class="footer__contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 03020548889</li>
+                        <li><i class="fas fa-envelope"></i> codesfatima@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Support Available</li>
+                    </ul>
+                    <div class="footer__payment">
+                        <h4>We Accept</h4>
+                        <div class="payment-icons">
+                            <span><i class="fas fa-university" title="EFT"></i></span>
+                            <span><i class="fab fa-cc-visa" title="Visa"></i></span>
+                            <span><i class="fab fa-cc-mastercard" title="Mastercard"></i></span>
+                            <span><i class="fas fa-coins" title="Revolut"></i></span>
+                            <span><i class="fab fa-bitcoin" title="Bitcoin"></i></span>
+                            <span><i class="fab fa-ethereum" title="Ethereum"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 <strong>IPTV South Africa</strong>. All rights reserved. 🇿🇦</p>
+                <div class="footer__bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
