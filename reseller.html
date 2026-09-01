@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -311,7 +311,7 @@
             color: #1a8a3f;
         }
 
-        /* Reseller Includes */
+        /* Reseller Includes - NOW 4 CARDS */
         .reseller-includes {
             padding: 80px 0;
             background: #0f0f0f;
@@ -427,8 +427,10 @@
         }
 
         /* ================================================================
-           RESPONSIVE - RESELLER PAGE
+           RESPONSIVE - RESELLER PAGE (FULLY MOBILE FRIENDLY)
            ================================================================ */
+
+        /* Tablet */
         @media (max-width: 992px) {
             .hero-reseller__inner {
                 grid-template-columns: 1fr;
@@ -476,6 +478,7 @@
             }
         }
 
+        /* Mobile */
         @media (max-width: 768px) {
             .hero-reseller {
                 padding: 120px 0 50px;
@@ -532,9 +535,11 @@
                 font-size: 1.2rem;
             }
 
+            /* 4 cards become 2 columns on tablet */
             .reseller-includes__grid {
                 grid-template-columns: 1fr 1fr;
-                max-width: 400px;
+                max-width: 500px;
+                gap: 20px;
             }
 
             .include__card {
@@ -576,6 +581,7 @@
             }
         }
 
+        /* Small Mobile */
         @media (max-width: 576px) {
             .hero-reseller {
                 padding: 110px 0 40px;
@@ -616,16 +622,16 @@
             }
 
             .hero__trust .trust-item {
-                font-size: 0.7rem;
-                padding: 3px 10px 3px 8px;
+                font-size: 0.65rem;
+                padding: 3px 8px 3px 6px;
             }
 
             .why-reseller__card {
-                padding: 24px 16px;
+                padding: 20px 14px;
             }
 
             .why-reseller__card .icon {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
             .why-reseller__card h3 {
@@ -657,9 +663,11 @@
                 padding: 4px 0;
             }
 
+            /* 4 cards become 1 column on small mobile */
             .reseller-includes__grid {
                 grid-template-columns: 1fr;
                 max-width: 340px;
+                gap: 16px;
             }
 
             .include__card {
@@ -668,6 +676,14 @@
 
             .include__card .icon {
                 font-size: 1.8rem;
+            }
+
+            .include__card h3 {
+                font-size: 0.95rem;
+            }
+
+            .include__card p {
+                font-size: 0.8rem;
             }
 
             .reseller-testimonials__grid {
@@ -703,7 +719,7 @@
                 font-size: 0.6rem;
             }
 
-            /* Fix for the trust badge card on mobile */
+            /* Fix for trust badge card on mobile */
             .hero__trust-card {
                 flex-direction: column;
                 text-align: center;
@@ -762,6 +778,7 @@
             }
         }
 
+        /* Extra Small Mobile */
         @media (max-width: 400px) {
             .hero-reseller__title {
                 font-size: 1.5rem;
@@ -790,8 +807,8 @@
             }
 
             .hero__trust .trust-item {
-                font-size: 0.65rem;
-                padding: 2px 8px 2px 6px;
+                font-size: 0.6rem;
+                padding: 2px 6px 2px 4px;
             }
 
             .section-title {
@@ -1019,7 +1036,7 @@
     </section>
 
     <!-- ================================================================
-    RESELLER INCLUDES
+    RESELLER INCLUDES - NOW 4 CARDS ONLY
     ================================================================ -->
     <section class="reseller-includes" id="includes">
         <div class="container">
@@ -1048,16 +1065,6 @@
                     <span class="icon"><i class="fas fa-chart-bar"></i></span>
                     <h3>Grow Your Business</h3>
                     <p>Scale your IPTV reseller business with recurring revenue, marketing tools, and dedicated support.</p>
-                </div>
-                <div class="include__card" style="grid-column: 2 / 3;">
-                    <span class="icon"><i class="fas fa-gift"></i></span>
-                    <h3>Free Trial Available</h3>
-                    <p>Test the IPTV South Africa service before you commit. Experience the quality and reliability firsthand.</p>
-                </div>
-                <div class="include__card" style="grid-column: 3 / 4;">
-                    <span class="icon"><i class="fas fa-headset"></i></span>
-                    <h3>24/7 Support</h3>
-                    <p>Get help whenever you need it. Our team is available around the clock to support your IPTV reseller business.</p>
                 </div>
             </div>
         </div>
