@@ -1,4 +1,4 @@
-  /* ================================================================
+ /* ================================================================
    RESET & BASE - Black / Green / Yellow Theme
    ================================================================ */
 * {
@@ -154,7 +154,7 @@ img {
 }
 
 /* ================================================================
-   HEADER - UPDATED
+   HEADER & DROPDOWN
    ================================================================ */
 .header {
     position: fixed;
@@ -259,6 +259,88 @@ img {
 }
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================================================================
+   DROPDOWN MENU - Desktop & Mobile
+   ================================================================ */
+.nav__list .dropdown {
+    position: relative;
+}
+
+.nav__list .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #141414;
+    border: 1px solid rgba(247, 212, 74, 0.15);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 100;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+.nav__list .dropdown-menu li {
+    list-style: none;
+    padding: 0;
+}
+
+.nav__list .dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav__list .dropdown-menu li a:hover {
+    color: #f7d44a;
+    background: rgba(247, 212, 74, 0.05);
+}
+
+.nav__list .dropdown > a::after {
+    content: ' ▾';
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+/* Desktop: Show dropdown on hover */
+@media (min-width: 769px) {
+    .nav__list .dropdown:hover .dropdown-menu {
+        display: block !important;
+    }
+}
+
+/* Mobile: Show dropdown on click */
+@media (max-width: 768px) {
+    .nav__list .dropdown-menu {
+        display: none;
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        width: 100%;
+    }
+    
+    .nav__list .dropdown.open .dropdown-menu {
+        display: block !important;
+    }
+    
+    .nav__list .dropdown.open > a::after {
+        content: ' ▴';
+    }
+    
+    .dropdown-menu li {
+        padding: 4px 0;
+    }
+    
+    .dropdown-menu li a {
+        font-size: 0.9rem !important;
+        padding: 6px 20px !important;
+    }
 }
 
 /* ================================================================
@@ -1520,7 +1602,7 @@ img {
     .hamburger { display: flex; }
     .nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #0a0a0a; padding: 24px 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.8); border-bottom: 1px solid rgba(247,212,74,0.1); }
     .nav.open { display: block; }
-    .nav__list { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .nav__list { flex-direction: column; gap: 16px; align-items: flex-start; width: 100%; }
     .header__actions { display: none; }
     .hero__stats { grid-template-columns: repeat(2, 1fr); }
     .hero__title { font-size: 2.5rem; }
