@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ==========================================
-    // 1. Mobile Menu Toggle
+    // 1. Mobile Menu
     // ==========================================
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('mainNav');
@@ -20,21 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
-        
         if (link) {
             link.addEventListener('click', function(e) {
-                // Check if it's mobile (screen width <= 768px)
                 if (window.innerWidth <= 768) {
-                    e.preventDefault(); // Prevent navigation
-                    
-                    // Close all other dropdowns
+                    e.preventDefault();
                     dropdowns.forEach(d => {
-                        if (d !== dropdown) {
-                            d.classList.remove('open');
-                        }
+                        if (d !== dropdown) d.classList.remove('open');
                     });
-                    
-                    // Toggle this dropdown
                     dropdown.classList.toggle('open');
                 }
             });
@@ -48,24 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.innerWidth <= 768) {
             const isDropdown = e.target.closest('.dropdown');
             if (!isDropdown) {
-                dropdowns.forEach(d => {
-                    d.classList.remove('open');
-                });
+                dropdowns.forEach(d => d.classList.remove('open'));
             }
         }
     });
 
     // ==========================================
-    // 4. Close mobile menu when clicking a link (except dropdown toggles)
+    // 4. Close mobile menu when clicking a link
     // ==========================================
     document.querySelectorAll('.nav__link, .dropdown-menu a').forEach(link => {
         link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                // Don't close if it's a dropdown toggle
-                if (!this.closest('.dropdown') || this.closest('.dropdown-menu')) {
-                    hamburger.classList.remove('active');
-                    nav.classList.remove('open');
-                }
+            if (window.innerWidth <= 768 && !this.closest('.dropdown')) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('open');
             }
         });
     });
