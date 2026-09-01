@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ==========================================
-    // 1. Mobile Menu
+    // 1. Mobile Menu Toggle
     // ==========================================
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('mainNav');
@@ -13,18 +13,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.querySelectorAll('.nav__link').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            nav.classList.remove('open');
+    // ==========================================
+    // 2. Mobile Dropdown Fix - IMPORTANT!
+    // ==========================================
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        
+        if (link) {
+            link.addEventListener('click', function(e) {
+                // Check if it's mobile (screen width <= 768px)
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // Prevent navigation
+                    
+                    // Close all other dropdowns
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) {
+                            d.classList.remove('open');
+                        }
+                    });
+                    
+                    // Toggle this dropdown
+                    dropdown.classList.toggle('open');
+                }
+            });
+        }
+    });
+
+    // ==========================================
+    // 3. Close dropdown when clicking elsewhere
+    // ==========================================
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            const isDropdown = e.target.closest('.dropdown');
+            if (!isDropdown) {
+                dropdowns.forEach(d => {
+                    d.classList.remove('open');
+                });
+            }
+        }
+    });
+
+    // ==========================================
+    // 4. Close mobile menu when clicking a link (except dropdown toggles)
+    // ==========================================
+    document.querySelectorAll('.nav__link, .dropdown-menu a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                // Don't close if it's a dropdown toggle
+                if (!this.closest('.dropdown') || this.closest('.dropdown-menu')) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('open');
+                }
+            }
         });
     });
 
     // ==========================================
-    // 2. Active Nav Link
+    // 5. Active Nav Link
     // ==========================================
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav__link');
+    const navLinks = document.querySelectorAll('.nav__link:not(.dropdown > a)');
 
     window.addEventListener('scroll', function() {
         let current = '';
@@ -44,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==========================================
-    // 3. Counter Animation for 30,000+
+    // 6. Counter Animation for 30,000+
     // ==========================================
     const counters = document.querySelectorAll('.stat-item .number[data-count]');
 
@@ -88,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     counters.forEach(el => observer.observe(el));
 
     // ==========================================
-    // 4. FAQ Accordion
+    // 7. FAQ Accordion
     // ==========================================
     const faqQuestions = document.querySelectorAll('.faq__question');
 
@@ -109,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==========================================
-    // 5. Header Shadow
+    // 8. Header Shadow
     // ==========================================
     const header = document.getElementById('header');
     window.addEventListener('scroll', function() {
