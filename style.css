@@ -1,4 +1,4 @@
-/* ================================================================
+  /* ================================================================
    RESET & BASE - Black / Green / Yellow Theme
    ================================================================ */
 * {
@@ -154,7 +154,7 @@ img {
 }
 
 /* ================================================================
-   HEADER
+   HEADER - UPDATED
    ================================================================ */
 .header {
     position: fixed;
@@ -262,7 +262,7 @@ img {
 }
 
 /* ================================================================
-   HERO - Everything in One Section
+   HERO
    ================================================================ */
 .hero {
     padding: 140px 0 60px;
@@ -333,15 +333,8 @@ img {
 }
 
 @keyframes pulse {
-    0%,
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.4;
-        transform: scale(0.7);
-    }
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
 }
 
 .hero__badge .sa-flag-small {
@@ -384,7 +377,6 @@ img {
     flex-wrap: wrap;
 }
 
-/* Hero Trust Badges */
 .hero__trust {
     display: flex;
     gap: 16px;
@@ -410,7 +402,6 @@ img {
     color: #1a8a3f;
 }
 
-/* Hero Stats */
 .hero__stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -438,9 +429,6 @@ img {
     color: #94a3b8;
 }
 
-/* ================================================================
-   TRUST BADGE STYLE CARD - What is IPTV South Africa
-   ================================================================ */
 .hero__trust-card {
     grid-column: 1 / -1;
     margin-top: 30px;
@@ -500,9 +488,6 @@ img {
     font-size: 0.8rem;
 }
 
-/* ================================================================
-   CITIES - Inside Hero
-   ================================================================ */
 .hero__cities {
     grid-column: 1 / -1;
     margin-top: 24px;
@@ -557,7 +542,7 @@ img {
 }
 
 /* ================================================================
-   WHAT'S INCLUDED - MOVED BELOW HERO
+   WHAT'S INCLUDED
    ================================================================ */
 .included {
     padding: 60px 0 80px;
@@ -612,7 +597,7 @@ img {
 }
 
 /* ================================================================
-   BEST IPTV SOUTH AFRICA SECTION
+   BEST IPTV
    ================================================================ */
 .best-iptv {
     padding: 60px 0 80px;
@@ -693,9 +678,6 @@ img {
     line-height: 1.6;
 }
 
-/* ================================================================
-   BADGES INSIDE CARDS
-   ================================================================ */
 .best-iptv__item--sports {
     grid-column: 1 / -1;
     max-width: 700px;
@@ -740,7 +722,7 @@ img {
 }
 
 /* ================================================================
-   PRICING SECTION
+   PRICING
    ================================================================ */
 .pricing {
     padding: 80px 0 60px;
@@ -870,7 +852,7 @@ img {
 }
 
 /* ================================================================
-   DEVICE COMPATIBILITY
+   DEVICES
    ================================================================ */
 .devices {
     padding: 80px 0;
@@ -951,7 +933,7 @@ img {
 }
 
 /* ================================================================
-   FEATURES (Why Choose Us) - WITH KEYWORDS
+   FEATURES
    ================================================================ */
 .features {
     padding: 80px 0;
@@ -1013,7 +995,7 @@ img {
 }
 
 /* ================================================================
-   PAYMENT METHODS SECTION
+   PAYMENTS
    ================================================================ */
 .payments {
     padding: 80px 0;
@@ -1119,7 +1101,7 @@ img {
 }
 
 /* ================================================================
-   HOW IT WORKS
+   STEPS
    ================================================================ */
 .steps {
     padding: 80px 0;
@@ -1288,7 +1270,7 @@ img {
 }
 
 /* ================================================================
-   CTA BANNER
+   CTA
    ================================================================ */
 .cta {
     padding: 80px 0;
@@ -1446,7 +1428,6 @@ img {
     text-align: center;
 }
 
-/* Footer Payment Methods */
 .footer__payment {
     margin-top: 20px;
 }
@@ -1507,769 +1488,101 @@ img {
 }
 
 /* ================================================================
-   RESELLER PAGE SPECIFIC STYLES
-   ================================================================ */
-
-/* Hero - Reseller */
-.hero-reseller {
-    padding: 140px 0 80px;
-    background: #0a0a0a;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-}
-
-.hero-reseller::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    right: -15%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(247, 212, 74, 0.06) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.hero-reseller__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-reseller__content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.hero-reseller__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(247, 212, 74, 0.12);
-    border: 1px solid rgba(247, 212, 74, 0.2);
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    color: #f7d44a;
-    width: fit-content;
-}
-
-.hero-reseller__badge .live {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #1a8a3f;
-    border-radius: 50%;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-.hero-reseller__title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.1;
-    color: #ffffff;
-}
-
-.hero-reseller__title .highlight-yellow {
-    color: #f7d44a;
-}
-
-.hero-reseller__title .highlight-green {
-    color: #1a8a3f;
-}
-
-.hero-reseller__text {
-    font-size: 1.15rem;
-    color: #94a3b8;
-    line-height: 1.7;
-}
-
-.hero-reseller__text strong {
-    color: #f7d44a;
-}
-
-.hero-reseller__stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 24px 20px;
-    margin-top: 10px;
-}
-
-.hero-reseller__buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-/* Why Reseller */
-.why-reseller {
-    padding: 80px 0;
-    background: #0f0f0f;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-}
-
-.why-reseller__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.why-reseller__card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 32px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.why-reseller__card:hover {
-    transform: translateY(-6px);
-    border-color: #f7d44a;
-    box-shadow: 0 12px 40px rgba(247, 212, 74, 0.06);
-}
-
-.why-reseller__card .icon {
-    font-size: 2.8rem;
-    color: #f7d44a;
-    display: block;
-    margin-bottom: 16px;
-}
-
-.why-reseller__card h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #ffffff;
-}
-
-.why-reseller__card p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* Reseller Plans - No Prices */
-.reseller-plans {
-    padding: 80px 0;
-    background: #0a0a0a;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-}
-
-.reseller-plans__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.reseller-plans__card {
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 16px;
-    padding: 32px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.06);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.reseller-plans__card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border-color: #1a8a3f;
-}
-
-.reseller-plans__card--popular {
-    border-color: #f7d44a;
-    box-shadow: 0 4px 24px rgba(247, 212, 74, 0.15);
-}
-
-.reseller-plans__card--popular:hover {
-    box-shadow: 0 12px 48px rgba(247, 212, 74, 0.25);
-}
-
-.reseller-plans__card .plan-name {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 4px;
-}
-
-.reseller-plans__card .plan-credits {
-    font-size: 1rem;
-    color: #f7d44a;
-    margin-bottom: 16px;
-}
-
-.reseller-plans__card .plan-credits strong {
-    color: #f7d44a;
-}
-
-.reseller-plans__card .plan-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
-    text-align: left;
-    flex-grow: 1;
-}
-
-.reseller-plans__card .plan-features li {
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.88rem;
-    color: #94a3b8;
-}
-
-.reseller-plans__card .plan-features li:last-child {
-    border-bottom: none;
-}
-
-.reseller-plans__card .plan-features li i {
-    width: 16px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #1a8a3f;
-}
-
-/* Reseller Includes */
-.reseller-includes {
-    padding: 80px 0;
-    background: #0f0f0f;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-}
-
-.reseller-includes__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.include__card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 28px 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.include__card:hover {
-    transform: translateY(-6px);
-    border-color: #f7d44a;
-    box-shadow: 0 12px 40px rgba(247, 212, 74, 0.06);
-}
-
-.include__card .icon {
-    font-size: 2.6rem;
-    color: #f7d44a;
-    display: block;
-    margin-bottom: 12px;
-}
-
-.include__card h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 6px;
-}
-
-.include__card p {
-    color: #94a3b8;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-/* Reseller Testimonials */
-.reseller-testimonials {
-    padding: 80px 0;
-    background: #0a0a0a;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-}
-
-.reseller-testimonials__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-/* Reseller FAQ */
-.reseller-faq {
-    padding: 80px 0;
-    background: #0f0f0f;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-}
-
-.reseller-faq__grid {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* CTA Reseller */
-.cta-reseller {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #0a0a0a 0%, #0f2a0f 40%, #1a3a1a 70%, #0a0a0a 100%);
-    color: #fff;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(247, 212, 74, 0.2);
-}
-
-.cta-reseller::before {
-    content: '💼';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20rem;
-    opacity: 0.03;
-    pointer-events: none;
-}
-
-.cta-reseller h2 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    margin-bottom: 16px;
-    position: relative;
-    z-index: 1;
-}
-
-.cta-reseller p {
-    font-size: 1.1rem;
-    opacity: 0.8;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    position: relative;
-    z-index: 1;
-    color: #94a3b8;
-}
-
-/* ================================================================
    RESPONSIVE
    ================================================================ */
 @media (max-width: 992px) {
-    .hero__inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .hero__badge {
-        margin: 0 auto;
-    }
-    .hero__text {
-        max-width: 100%;
-    }
-    .hero__buttons {
-        justify-content: center;
-    }
-    .hero__trust {
-        justify-content: center;
-    }
-    .hero__stats {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .hero__trust-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 24px 20px;
-    }
-    .hero__trust-card .trust-badge-text {
-        text-align: center;
-    }
-    .included__grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 500px;
-    }
-    .best-iptv__grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 500px;
-    }
-    .devices__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .pricing__grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    .features__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .payments__grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 500px;
-    }
-    .testimonials__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .footer__inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-    .footer__brand {
-        grid-column: 1 / -1;
-    }
-    .footer__brand p {
-        max-width: 100%;
-    }
-    .hero__cities .cities-grid {
-        gap: 10px;
-    }
-    .best-iptv__title {
-        font-size: 2.2rem;
-    }
-    .best-iptv__item--sports {
-        max-width: 100%;
-    }
-    .devices__title {
-        font-size: 2.2rem;
-    }
-    .payments__title {
-        font-size: 2rem;
-    }
-
-    /* Reseller responsive */
-    .hero-reseller__inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .hero-reseller__badge {
-        margin: 0 auto;
-    }
-    .hero-reseller__buttons {
-        justify-content: center;
-    }
-    .hero-reseller__stats {
-        max-width: 500px;
-        margin: 10px auto 0;
-    }
-    .why-reseller__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .reseller-plans__grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    .reseller-includes__grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 600px;
-    }
-    .reseller-testimonials__grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    .hero__inner { grid-template-columns: 1fr; text-align: center; }
+    .hero__badge { margin: 0 auto; }
+    .hero__text { max-width: 100%; }
+    .hero__buttons { justify-content: center; }
+    .hero__trust { justify-content: center; }
+    .hero__stats { max-width: 500px; margin: 0 auto; }
+    .hero__trust-card { flex-direction: column; text-align: center; padding: 24px 20px; }
+    .hero__trust-card .trust-badge-text { text-align: center; }
+    .included__grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
+    .best-iptv__grid { grid-template-columns: 1fr 1fr; max-width: 500px; }
+    .devices__grid { grid-template-columns: repeat(2, 1fr); }
+    .pricing__grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; margin: 0 auto; }
+    .features__grid { grid-template-columns: repeat(2, 1fr); }
+    .payments__grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
+    .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+    .footer__inner { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .footer__brand { grid-column: 1 / -1; }
+    .footer__brand p { max-width: 100%; }
+    .hero__cities .cities-grid { gap: 10px; }
+    .best-iptv__title { font-size: 2.2rem; }
+    .best-iptv__item--sports { max-width: 100%; }
+    .devices__title { font-size: 2.2rem; }
+    .payments__title { font-size: 2rem; }
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    .nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #0a0a0a;
-        padding: 24px 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-        border-bottom: 1px solid rgba(247, 212, 74, 0.1);
-    }
-    .nav.open {
-        display: block;
-    }
-    .nav__list {
-        flex-direction: column;
-        gap: 16px;
-        align-items: flex-start;
-    }
-    .header__actions {
-        display: none;
-    }
-    .hero__stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .hero__title {
-        font-size: 2.5rem;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-    .steps__grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .hero__trust-card {
-        padding: 20px 16px;
-    }
-    .hero__trust-card .trust-badge-text {
-        font-size: 0.95rem;
-    }
-    .hero__trust-card .trust-badge-icon {
-        font-size: 2.2rem;
-    }
-    .included__grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 400px;
-    }
-    .best-iptv__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-    .best-iptv__title {
-        font-size: 1.8rem;
-    }
-    .best-iptv__text {
-        font-size: 1rem;
-    }
-    .devices__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .devices__title {
-        font-size: 1.8rem;
-    }
-    .devices__text {
-        font-size: 1rem;
-    }
-    .payments__grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 400px;
-    }
-    .payments__title {
-        font-size: 1.8rem;
-    }
-    .payments__trust {
-        gap: 16px;
-        padding: 16px;
-    }
-
-    /* Reseller responsive */
-    .hero-reseller__title {
-        font-size: 2.5rem;
-    }
-    .hero-reseller__stats {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-        padding: 16px;
-    }
-    .why-reseller__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .reseller-plans__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-    .reseller-includes__grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 400px;
-    }
-    .reseller-testimonials__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .cta-reseller h2 {
-        font-size: 2rem;
-    }
+    .hamburger { display: flex; }
+    .nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #0a0a0a; padding: 24px 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.8); border-bottom: 1px solid rgba(247,212,74,0.1); }
+    .nav.open { display: block; }
+    .nav__list { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .header__actions { display: none; }
+    .hero__stats { grid-template-columns: repeat(2, 1fr); }
+    .hero__title { font-size: 2.5rem; }
+    .section-title { font-size: 2rem; }
+    .steps__grid { grid-template-columns: 1fr; gap: 30px; }
+    .hero__trust-card { padding: 20px 16px; }
+    .hero__trust-card .trust-badge-text { font-size: 0.95rem; }
+    .hero__trust-card .trust-badge-icon { font-size: 2.2rem; }
+    .included__grid { grid-template-columns: 1fr 1fr; max-width: 400px; }
+    .best-iptv__grid { grid-template-columns: 1fr; max-width: 400px; }
+    .best-iptv__title { font-size: 1.8rem; }
+    .best-iptv__text { font-size: 1rem; }
+    .devices__grid { grid-template-columns: 1fr 1fr; }
+    .devices__title { font-size: 1.8rem; }
+    .devices__text { font-size: 1rem; }
+    .payments__grid { grid-template-columns: 1fr 1fr; max-width: 400px; }
+    .payments__title { font-size: 1.8rem; }
+    .payments__trust { gap: 16px; padding: 16px; }
 }
 
 @media (max-width: 576px) {
-    .hero {
-        padding: 120px 0 40px;
-    }
-    .hero__title {
-        font-size: 2rem;
-    }
-    .hero__title .flag {
-        font-size: 1.2rem;
-        display: block;
-    }
-    .hero__text {
-        font-size: 1rem;
-    }
-    .hero__buttons .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    .hero__trust .trust-item {
-        font-size: 0.7rem;
-        padding: 4px 10px 4px 8px;
-    }
-    .hero__stats {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 16px;
-    }
-    .stat-item .number {
-        font-size: 1.6rem;
-    }
-    .hero__trust-card {
-        padding: 16px 12px;
-        gap: 12px;
-    }
-    .hero__trust-card .trust-badge-text {
-        font-size: 0.9rem;
-    }
-    .hero__trust-card .trust-badge-icon {
-        font-size: 1.8rem;
-    }
-    .hero__trust-card .trust-badge-check {
-        font-size: 0.75rem;
-        padding: 3px 10px;
-    }
-    .hero__cities .city-item {
-        font-size: 0.75rem;
-        padding: 4px 12px;
-    }
-    .hero__cities .city-item i {
-        font-size: 0.85rem;
-    }
-    .included__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .included__item {
-        padding: 16px 12px;
-    }
-    .included__item i {
-        font-size: 1.8rem;
-    }
-    .included__item span {
-        font-size: 0.8rem;
-    }
-    .best-iptv__grid {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-    }
-    .best-iptv__title {
-        font-size: 1.5rem;
-    }
-    .best-iptv__text {
-        font-size: 0.95rem;
-    }
-    .best-iptv__item {
-        padding: 20px 16px;
-    }
-    .best-iptv__item .item-icon {
-        font-size: 2rem;
-    }
-    .best-iptv__item h3 {
-        font-size: 1rem;
-    }
-    .best-iptv__item--sports {
-        max-width: 100%;
-    }
-    .badges-container {
-        gap: 6px;
-    }
-    .badge-item {
-        font-size: 0.7rem;
-        padding: 4px 12px;
-    }
-    .badge-item i {
-        font-size: 0.7rem;
-    }
-    .devices__grid {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-        margin: 0 auto;
-    }
-    .devices__title {
-        font-size: 1.5rem;
-    }
-    .devices__text {
-        font-size: 0.95rem;
-    }
-    .device__card {
-        padding: 18px 16px;
-    }
-    .device__card .device-icon {
-        font-size: 2rem;
-    }
-    .pricing__grid {
-        grid-template-columns: 1fr;
-        max-width: 380px;
-    }
-    .pricing__price {
-        font-size: 2rem;
-    }
-    .features__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .payments__grid {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-    }
-    .payments__title {
-        font-size: 1.5rem;
-    }
-    .payments__trust {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .testimonials__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .footer__inner {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-    .footer__bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    .cta h2 {
-        font-size: 2rem;
-    }
-
-    /* Reseller responsive */
-    .hero-reseller {
-        padding: 120px 0 40px;
-    }
-    .hero-reseller__title {
-        font-size: 2rem;
-    }
-    .hero-reseller__text {
-        font-size: 1rem;
-    }
-    .hero-reseller__buttons .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    .hero-reseller__stats {
-        grid-template-columns: 1fr 1fr;
-    }
-    .reseller-plans__grid {
-        max-width: 340px;
-    }
-    .reseller-includes__grid {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-    }
-    .cta-reseller h2 {
-        font-size: 1.8rem;
-    }
+    .hero { padding: 120px 0 40px; }
+    .hero__title { font-size: 2rem; }
+    .hero__title .flag { font-size: 1.2rem; display: block; }
+    .hero__text { font-size: 1rem; }
+    .hero__buttons .btn { width: 100%; justify-content: center; }
+    .hero__trust .trust-item { font-size: 0.7rem; padding: 4px 10px 4px 8px; }
+    .hero__stats { grid-template-columns: 1fr 1fr; gap: 10px; padding: 16px; }
+    .stat-item .number { font-size: 1.6rem; }
+    .hero__trust-card { padding: 16px 12px; gap: 12px; }
+    .hero__trust-card .trust-badge-text { font-size: 0.9rem; }
+    .hero__trust-card .trust-badge-icon { font-size: 1.8rem; }
+    .hero__trust-card .trust-badge-check { font-size: 0.75rem; padding: 3px 10px; }
+    .hero__cities .city-item { font-size: 0.75rem; padding: 4px 12px; }
+    .hero__cities .city-item i { font-size: 0.85rem; }
+    .included__grid { grid-template-columns: 1fr 1fr; }
+    .included__item { padding: 16px 12px; }
+    .included__item i { font-size: 1.8rem; }
+    .included__item span { font-size: 0.8rem; }
+    .best-iptv__grid { grid-template-columns: 1fr; max-width: 340px; }
+    .best-iptv__title { font-size: 1.5rem; }
+    .best-iptv__text { font-size: 0.95rem; }
+    .best-iptv__item { padding: 20px 16px; }
+    .best-iptv__item .item-icon { font-size: 2rem; }
+    .best-iptv__item h3 { font-size: 1rem; }
+    .best-iptv__item--sports { max-width: 100%; }
+    .badges-container { gap: 6px; }
+    .badge-item { font-size: 0.7rem; padding: 4px 12px; }
+    .badge-item i { font-size: 0.7rem; }
+    .devices__grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+    .devices__title { font-size: 1.5rem; }
+    .devices__text { font-size: 0.95rem; }
+    .device__card { padding: 18px 16px; }
+    .device__card .device-icon { font-size: 2rem; }
+    .pricing__grid { grid-template-columns: 1fr; max-width: 380px; }
+    .pricing__price { font-size: 2rem; }
+    .features__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .payments__grid { grid-template-columns: 1fr; max-width: 340px; }
+    .payments__title { font-size: 1.5rem; }
+    .payments__trust { flex-direction: column; align-items: center; gap: 12px; }
+    .testimonials__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .footer__inner { grid-template-columns: 1fr; gap: 24px; }
+    .footer__bottom { flex-direction: column; text-align: center; }
+    .cta h2 { font-size: 2rem; }
 }
