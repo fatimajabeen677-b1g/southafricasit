@@ -9,6 +9,804 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ================================================================
+           RESELLER PAGE SPECIFIC STYLES - FULLY RESPONSIVE
+           ================================================================ */
+
+        /* Hero - Reseller */
+        .hero-reseller {
+            padding: 140px 0 80px;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+        }
+
+        .hero-reseller::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(247, 212, 74, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-reseller__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-reseller__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-reseller__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(247, 212, 74, 0.12);
+            border: 1px solid rgba(247, 212, 74, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #f7d44a;
+            width: fit-content;
+        }
+
+        .hero-reseller__badge .live {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #1a8a3f;
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        .hero-reseller__title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #ffffff;
+        }
+
+        .hero-reseller__title .highlight-yellow {
+            color: #f7d44a;
+        }
+
+        .hero-reseller__title .highlight-green {
+            color: #1a8a3f;
+        }
+
+        .hero-reseller__text {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .hero-reseller__text strong {
+            color: #f7d44a;
+        }
+
+        .hero-reseller__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 24px 20px;
+            margin-top: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .number {
+            display: block;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #f7d44a;
+        }
+
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .hero-reseller__buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero__trust {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 4px;
+        }
+
+        .hero__trust .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #94a3b8;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 16px 6px 12px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .hero__trust .trust-item i {
+            font-size: 0.9rem;
+            color: #1a8a3f;
+        }
+
+        /* Why Reseller */
+        .why-reseller {
+            padding: 80px 0;
+            background: #0f0f0f;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+        }
+
+        .why-reseller__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .why-reseller__card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-reseller__card:hover {
+            transform: translateY(-6px);
+            border-color: #f7d44a;
+            box-shadow: 0 12px 40px rgba(247, 212, 74, 0.06);
+        }
+
+        .why-reseller__card .icon {
+            font-size: 2.8rem;
+            color: #f7d44a;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .why-reseller__card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .why-reseller__card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Reseller Plans */
+        .reseller-plans {
+            padding: 80px 0;
+            background: #0a0a0a;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+        }
+
+        .reseller-plans__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .reseller-plans__card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reseller-plans__card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            border-color: #1a8a3f;
+        }
+
+        .reseller-plans__card--popular {
+            border-color: #f7d44a;
+            box-shadow: 0 4px 24px rgba(247, 212, 74, 0.15);
+        }
+
+        .reseller-plans__card--popular:hover {
+            box-shadow: 0 12px 48px rgba(247, 212, 74, 0.25);
+        }
+
+        .popular__badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f7d44a;
+            color: #0a0a0a;
+            padding: 4px 20px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .reseller-plans__card .plan-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .reseller-plans__card .plan-credits {
+            font-size: 1rem;
+            color: #f7d44a;
+            margin-bottom: 16px;
+        }
+
+        .reseller-plans__card .plan-credits strong {
+            color: #f7d44a;
+        }
+
+        .reseller-plans__card .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .reseller-plans__card .plan-features li {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: #94a3b8;
+        }
+
+        .reseller-plans__card .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .reseller-plans__card .plan-features li i {
+            width: 16px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #1a8a3f;
+        }
+
+        /* Reseller Includes */
+        .reseller-includes {
+            padding: 80px 0;
+            background: #0f0f0f;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+        }
+
+        .reseller-includes__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .include__card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .include__card:hover {
+            transform: translateY(-6px);
+            border-color: #f7d44a;
+            box-shadow: 0 12px 40px rgba(247, 212, 74, 0.06);
+        }
+
+        .include__card .icon {
+            font-size: 2.6rem;
+            color: #f7d44a;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .include__card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .include__card p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Reseller Testimonials */
+        .reseller-testimonials {
+            padding: 80px 0;
+            background: #0a0a0a;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+        }
+
+        .reseller-testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        /* Reseller FAQ */
+        .reseller-faq {
+            padding: 80px 0;
+            background: #0f0f0f;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.1);
+        }
+
+        .reseller-faq__grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* CTA Reseller */
+        .cta-reseller {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #0f2a0f 40%, #1a3a1a 70%, #0a0a0a 100%);
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(247, 212, 74, 0.2);
+        }
+
+        .cta-reseller::before {
+            content: '💼';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20rem;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .cta-reseller h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-reseller p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+            color: #94a3b8;
+        }
+
+        /* ================================================================
+           RESPONSIVE - RESELLER PAGE
+           ================================================================ */
+        @media (max-width: 992px) {
+            .hero-reseller__inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-reseller__badge {
+                margin: 0 auto;
+            }
+
+            .hero-reseller__buttons {
+                justify-content: center;
+            }
+
+            .hero__trust {
+                justify-content: center;
+            }
+
+            .hero-reseller__stats {
+                max-width: 500px;
+                margin: 10px auto 0;
+            }
+
+            .why-reseller__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .reseller-plans__grid {
+                grid-template-columns: 1fr 1fr;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .reseller-includes__grid {
+                grid-template-columns: 1fr 1fr;
+                max-width: 600px;
+            }
+
+            .reseller-testimonials__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-reseller__title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-reseller {
+                padding: 120px 0 50px;
+            }
+
+            .hero-reseller__title {
+                font-size: 2.2rem;
+            }
+
+            .hero-reseller__text {
+                font-size: 1rem;
+            }
+
+            .hero-reseller__stats {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .stat-item .number {
+                font-size: 1.8rem;
+            }
+
+            .stat-item .label {
+                font-size: 0.75rem;
+            }
+
+            .hero-reseller__buttons .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+
+            .hero__trust .trust-item {
+                font-size: 0.75rem;
+                padding: 4px 12px 4px 10px;
+            }
+
+            .why-reseller__grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .reseller-plans__grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .reseller-plans__card {
+                padding: 24px 18px;
+            }
+
+            .reseller-plans__card .plan-name {
+                font-size: 1.2rem;
+            }
+
+            .reseller-includes__grid {
+                grid-template-columns: 1fr 1fr;
+                max-width: 400px;
+            }
+
+            .include__card {
+                padding: 20px 16px;
+            }
+
+            .include__card .icon {
+                font-size: 2rem;
+            }
+
+            .include__card h3 {
+                font-size: 1rem;
+            }
+
+            .include__card p {
+                font-size: 0.85rem;
+            }
+
+            .reseller-testimonials__grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .cta-reseller h2 {
+                font-size: 2rem;
+            }
+
+            .cta-reseller p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-reseller {
+                padding: 110px 0 40px;
+            }
+
+            .hero-reseller__title {
+                font-size: 1.8rem;
+            }
+
+            .hero-reseller__text {
+                font-size: 0.95rem;
+            }
+
+            .hero-reseller__buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-reseller__buttons .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 0.95rem;
+            }
+
+            .hero-reseller__stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                padding: 14px;
+            }
+
+            .stat-item .number {
+                font-size: 1.5rem;
+            }
+
+            .stat-item .label {
+                font-size: 0.7rem;
+            }
+
+            .hero__trust .trust-item {
+                font-size: 0.7rem;
+                padding: 3px 10px 3px 8px;
+            }
+
+            .why-reseller__card {
+                padding: 24px 16px;
+            }
+
+            .why-reseller__card .icon {
+                font-size: 2.2rem;
+            }
+
+            .why-reseller__card h3 {
+                font-size: 1rem;
+            }
+
+            .why-reseller__card p {
+                font-size: 0.85rem;
+            }
+
+            .reseller-plans__grid {
+                max-width: 340px;
+            }
+
+            .reseller-plans__card {
+                padding: 20px 14px;
+            }
+
+            .reseller-plans__card .plan-name {
+                font-size: 1.1rem;
+            }
+
+            .reseller-plans__card .plan-credits {
+                font-size: 0.9rem;
+            }
+
+            .reseller-plans__card .plan-features li {
+                font-size: 0.8rem;
+                padding: 4px 0;
+            }
+
+            .reseller-includes__grid {
+                grid-template-columns: 1fr;
+                max-width: 340px;
+            }
+
+            .include__card {
+                padding: 18px 14px;
+            }
+
+            .include__card .icon {
+                font-size: 1.8rem;
+            }
+
+            .reseller-testimonials__grid {
+                max-width: 340px;
+            }
+
+            .testimonial__card {
+                padding: 20px 16px;
+            }
+
+            .testimonial__text {
+                font-size: 0.85rem;
+            }
+
+            .cta-reseller h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-reseller p {
+                font-size: 0.9rem;
+            }
+
+            .cta-reseller .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .section-tag {
+                font-size: 0.6rem;
+            }
+
+            /* Fix for the trust badge card on mobile */
+            .hero__trust-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 16px 14px;
+            }
+
+            .hero__trust-card .trust-badge-text {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+            .hero__trust-card .trust-badge-icon {
+                font-size: 1.8rem;
+            }
+
+            .hero__trust-card .trust-badge-check {
+                font-size: 0.75rem;
+                padding: 3px 10px;
+            }
+
+            /* Fix for city badges on mobile */
+            .hero__cities .cities-grid {
+                gap: 8px;
+            }
+
+            .hero__cities .city-item {
+                font-size: 0.7rem;
+                padding: 4px 10px;
+            }
+
+            .hero__cities .city-item i {
+                font-size: 0.8rem;
+            }
+
+            /* Fix for included grid on mobile */
+            .included__grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                max-width: 340px;
+            }
+
+            .included__item {
+                padding: 14px 10px;
+            }
+
+            .included__item i {
+                font-size: 1.6rem;
+            }
+
+            .included__item span {
+                font-size: 0.75rem;
+            }
+
+            .included__item small {
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-reseller__title {
+                font-size: 1.5rem;
+            }
+
+            .hero-reseller__text {
+                font-size: 0.85rem;
+            }
+
+            .hero-reseller__stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                padding: 12px;
+            }
+
+            .stat-item .number {
+                font-size: 1.3rem;
+            }
+
+            .stat-item .label {
+                font-size: 0.65rem;
+            }
+
+            .hero__trust {
+                gap: 8px;
+            }
+
+            .hero__trust .trust-item {
+                font-size: 0.65rem;
+                padding: 2px 8px 2px 6px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .reseller-plans__grid {
+                max-width: 300px;
+            }
+
+            .reseller-includes__grid {
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -25,6 +823,7 @@
                 <ul class="nav__list">
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="reseller.html" class="nav__link active">Reseller</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
                     <li><a href="index.html#pricing" class="nav__link">Pricing</a></li>
                     <li><a href="index.html#testimonials" class="nav__link">Reviews</a></li>
                     <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
@@ -32,7 +831,7 @@
             </nav>
             <div class="header__actions">
                 <a href="#" class="btn btn--yellow-outline btn--sm">Login</a>
-                <a href="#plans" class="btn btn--green btn--sm">Become Reseller</a>
+                <a href="https://wa.me/923020548889" target="_blank" class="btn btn--green btn--sm"><i class="fab fa-whatsapp"></i> Subscribe</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -61,7 +860,7 @@
                     <a href="#plans" class="btn btn--yellow btn--large">
                         <i class="fas fa-rocket"></i> View Reseller Plans
                     </a>
-                    <a href="#" class="btn btn--green btn--large">
+                    <a href="https://wa.me/923020548889" target="_blank" class="btn btn--green btn--large">
                         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                     </a>
                 </div>
@@ -93,6 +892,14 @@
                         <strong style="color: #f7d44a;">Free Trial Available</strong> — Test the service before you commit
                     </p>
                 </div>
+                <!-- WhatsApp Contact Card -->
+                <a href="https://wa.me/923020548889" target="_blank" style="display: block; background: rgba(26, 138, 63, 0.08); border: 1px solid rgba(26, 138, 63, 0.2); border-radius: 16px; padding: 16px 20px; margin-top: 12px; text-align: center; transition: all 0.3s ease; text-decoration: none;">
+                    <p style="color: #f7d44a; font-size: 0.95rem; font-weight: 600;">
+                        <i class="fab fa-whatsapp" style="color: #1a8a3f; font-size: 1.2rem;"></i> 
+                        Chat with us on WhatsApp
+                        <span style="display: block; color: #94a3b8; font-weight: 400; font-size: 0.85rem;">03020548889</span>
+                    </p>
+                </a>
             </div>
         </div>
     </section>
@@ -143,7 +950,7 @@
     </section>
 
     <!-- ================================================================
-    RESELLER PLANS - NO PRICES
+    RESELLER PLANS
     ================================================================ -->
     <section class="reseller-plans" id="plans">
         <div class="container">
@@ -153,6 +960,7 @@
                 <p class="section-subtitle">Choose the IPTV reseller package that fits your goals. All plans include full support and training.</p>
             </div>
             <div class="reseller-plans__grid">
+                <!-- Starter -->
                 <div class="reseller-plans__card">
                     <h3 class="plan-name">Starter</h3>
                     <div class="plan-credits"><strong>50</strong> Credits Included</div>
@@ -165,8 +973,10 @@
                         <li><i class="fas fa-check"></i> Marketing Materials</li>
                         <li><i class="fas fa-check"></i> Free Trial Available</li>
                     </ul>
-                    <a href="#" class="btn btn--yellow-outline btn--full">Get Started</a>
+                    <a href="https://wa.me/923020548889" target="_blank" class="btn btn--yellow-outline btn--full"><i class="fab fa-whatsapp"></i> Get Started</a>
                 </div>
+
+                <!-- Professional (Most Popular) -->
                 <div class="reseller-plans__card reseller-plans__card--popular">
                     <span class="popular__badge">⭐ Most Popular</span>
                     <h3 class="plan-name">Professional</h3>
@@ -181,8 +991,10 @@
                         <li><i class="fas fa-check"></i> Custom Pricing Options</li>
                         <li><i class="fas fa-check"></i> Free Trial Available</li>
                     </ul>
-                    <a href="#" class="btn btn--yellow btn--full">Get Started</a>
+                    <a href="https://wa.me/923020548889" target="_blank" class="btn btn--yellow btn--full"><i class="fab fa-whatsapp"></i> Get Started</a>
                 </div>
+
+                <!-- Business -->
                 <div class="reseller-plans__card">
                     <h3 class="plan-name">Business</h3>
                     <div class="plan-credits"><strong>350</strong> Credits Included</div>
@@ -197,7 +1009,7 @@
                         <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
                         <li><i class="fas fa-check"></i> Free Trial Available</li>
                     </ul>
-                    <a href="#" class="btn btn--yellow-outline btn--full">Get Started</a>
+                    <a href="https://wa.me/923020548889" target="_blank" class="btn btn--yellow-outline btn--full"><i class="fab fa-whatsapp"></i> Get Started</a>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 30px; color: #64748b; font-size: 0.9rem;">
@@ -287,13 +1099,69 @@
                 <p class="section-subtitle">Everything you need to know about becoming an IPTV South Africa reseller.</p>
             </div>
             <div class="reseller-faq__grid">
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>How does the IPTV reseller program work?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>You purchase credits in bulk at wholesale prices. Each credit equals one 1-month IPTV subscription for a customer. You set your own retail prices and keep the profit. We handle all technical aspects — servers, streams, and support.</p></div></div>
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>Do I need technical skills to be an IPTV reseller?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>No technical skills are required. We provide complete training and support. You just focus on selling IPTV subscriptions — we handle the rest.</p></div></div>
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>How much can I earn as an IPTV reseller?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>You can earn up to 70% profit on each IPTV subscription. For example, buy a 1-month credit for R50 and sell it for R170 — that's R120 profit per customer. With 50 customers, that's R6,000 monthly recurring income.</p></div></div>
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>What support do I get as an IPTV reseller?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>You get access to your reseller dashboard, marketing materials, training videos, and 24/7 support via WhatsApp and email. Higher-tier plans include a dedicated account manager.</p></div></div>
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>How do I get paid by my customers?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>You collect payments directly from your customers using your preferred method — EFT, Cash, PayPal, etc. We don't handle customer payments; you're in full control of your IPTV reseller business finances.</p></div></div>
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>Is there a free trial for the reseller program?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>Yes! We offer a free trial so you can test the IPTV South Africa service before you commit. Experience the quality and reliability firsthand before starting your IPTV reseller business.</p></div></div>
-                <div class="faq__item"><button class="faq__question" aria-expanded="false"><span>Is there a minimum commitment?</span><i class="fas fa-chevron-down"></i></button><div class="faq__answer"><p>No long-term commitment. You purchase credits once and they never expire. You can recharge anytime. Start small and scale your IPTV reseller business as you grow.</p></div></div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>How does the IPTV reseller program work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>You purchase credits in bulk at wholesale prices. Each credit equals one 1-month IPTV subscription for a customer. You set your own retail prices and keep the profit. We handle all technical aspects — servers, streams, and support.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Do I need technical skills to be an IPTV reseller?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>No technical skills are required. We provide complete training and support. You just focus on selling IPTV subscriptions — we handle the rest.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>How much can I earn as an IPTV reseller?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>You can earn up to 70% profit on each IPTV subscription. For example, buy a 1-month credit for R50 and sell it for R170 — that's R120 profit per customer. With 50 customers, that's R6,000 monthly recurring income.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>What support do I get as an IPTV reseller?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>You get access to your reseller dashboard, marketing materials, training videos, and 24/7 support via WhatsApp and email. Higher-tier plans include a dedicated account manager.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>How do I get paid by my customers?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>You collect payments directly from your customers using your preferred method — EFT, Cash, PayPal, etc. We don't handle customer payments; you're in full control of your IPTV reseller business finances.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Is there a free trial for the reseller program?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Yes! We offer a free trial so you can test the IPTV South Africa service before you commit. Experience the quality and reliability firsthand before starting your IPTV reseller business.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Is there a minimum commitment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>No long-term commitment. You purchase credits once and they never expire. You can recharge anytime. Start small and scale your IPTV reseller business as you grow.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -305,7 +1173,7 @@
         <div class="container">
             <h2>Ready to Start Your <span style="color: #f7d44a;">IPTV South Africa</span> Reseller Business?</h2>
             <p>Join 500+ successful IPTV resellers across South Africa. Low investment, high returns, and full support.</p>
-            <a href="#plans" class="btn btn--yellow btn--large"><i class="fas fa-rocket"></i> View Plans &amp; Start Now</a>
+            <a href="https://wa.me/923020548889" target="_blank" class="btn btn--yellow btn--large"><i class="fab fa-whatsapp"></i> View Plans &amp; Start Now</a>
         </div>
     </section>
 
@@ -319,17 +1187,21 @@
                     <a href="index.html" class="logo"><span class="flag-icon">🇿🇦</span><span>IPTV South Africa</span></a>
                     <p>Premium IPTV South Africa subscription with 30,000+ channels, 4K quality, and local support. The best IPTV streaming service in South Africa.</p>
                     <div class="footer__social">
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/923020548889" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer__links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="reseller.html">Reseller</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#testimonials">Reviews</a></li></ul></div>
+                <div class="footer__links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="reseller.html">Reseller</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#testimonials">Reviews</a></li></ul></div>
                 <div class="footer__links"><h4>Support</h4><ul><li><a href="index.html#faq">FAQ</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Setup Guide</a></li></ul></div>
                 <div class="footer__contact">
                     <h4>Contact</h4>
-                    <ul><li><i class="fas fa-phone"></i> 03020548889</li><li><i class="fas fa-envelope"></i> codesfatima@gmail.com</li><li><i class="fas fa-clock"></i> 24/7 Support Available</li></ul>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 03020548889</li>
+                        <li><i class="fas fa-envelope"></i> codesfatima@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Support Available</li>
+                    </ul>
                     <div class="footer__payment">
                         <h4>We Accept</h4>
                         <div class="payment-icons">
