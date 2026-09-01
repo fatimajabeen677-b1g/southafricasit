@@ -1,3 +1,8 @@
+# robots.txt for IPTV South Africa
 User-agent: *
 Allow: /
-Sitemap: https://iptvsa.co.za/sitemap.xml
+Allow: /reseller
+Allow: /blog
+Allow: /support
+
+Sitemap: https://iptvsouthafricaofficial.co.za/sitemap.xml
