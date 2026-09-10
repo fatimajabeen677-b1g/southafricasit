@@ -35,6 +35,39 @@ img {
 }
 
 /* ================================================================
+   LOGO IMAGE
+   ================================================================ */
+.logo .logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.footer__brand .logo .logo-img {
+    height: 28px;
+}
+
+@media (max-width: 768px) {
+    .logo .logo-img {
+        height: 28px;
+    }
+    .footer__brand .logo .logo-img {
+        height: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo .logo-img {
+        height: 24px;
+    }
+    .footer__brand .logo .logo-img {
+        height: 22px;
+    }
+}
+
+/* ================================================================
    BUTTONS - Green & Yellow Theme
    ================================================================ */
 .btn {
@@ -280,7 +313,6 @@ img {
     min-width: 180px;
     z-index: 100;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-    /* REMOVE SLIDER - NO transitions or animations */
     transition: none !important;
     animation: none !important;
 }
@@ -303,21 +335,18 @@ img {
     background: rgba(247, 212, 74, 0.05);
 }
 
-/* Arrow in Navigation - NO ANIMATION */
 .nav__list .dropdown > a .arrow {
     font-size: 0.55rem;
     margin-left: 4px;
     color: #64748b;
 }
 
-/* Desktop: Show dropdown on hover - NO SLIDER, just appears */
 @media (min-width: 769px) {
     .nav__list .dropdown:hover .dropdown-menu {
         display: block !important;
     }
 }
 
-/* Mobile: Show dropdown on click */
 @media (max-width: 768px) {
     .nav__list .dropdown-menu {
         display: none;
@@ -327,7 +356,6 @@ img {
         box-shadow: none;
         padding-left: 20px;
         width: 100%;
-        /* Mobile - also NO animation */
         transition: none !important;
         animation: none !important;
     }
@@ -1583,7 +1611,6 @@ img {
    RESELLER PAGE SPECIFIC STYLES
    ================================================================ */
 
-/* Hero - Reseller */
 .hero-reseller {
     padding: 140px 0 80px;
     background: #0a0a0a;
@@ -1684,7 +1711,6 @@ img {
     flex-wrap: wrap;
 }
 
-/* Why Reseller */
 .why-reseller {
     padding: 80px 0;
     background: #0f0f0f;
@@ -1733,7 +1759,6 @@ img {
     line-height: 1.6;
 }
 
-/* Reseller Plans - No Prices */
 .reseller-plans {
     padding: 80px 0;
     background: #0a0a0a;
@@ -1819,7 +1844,6 @@ img {
     color: #1a8a3f;
 }
 
-/* Reseller Includes */
 .reseller-includes {
     padding: 80px 0;
     background: #0f0f0f;
@@ -1869,7 +1893,6 @@ img {
     line-height: 1.6;
 }
 
-/* Reseller Testimonials */
 .reseller-testimonials {
     padding: 80px 0;
     background: #0a0a0a;
@@ -1882,7 +1905,6 @@ img {
     gap: 30px;
 }
 
-/* Reseller FAQ */
 .reseller-faq {
     padding: 80px 0;
     background: #0f0f0f;
@@ -1894,7 +1916,6 @@ img {
     margin: 0 auto;
 }
 
-/* CTA Reseller */
 .cta-reseller {
     padding: 80px 0;
     background: linear-gradient(135deg, #0a0a0a 0%, #0f2a0f 40%, #1a3a1a 70%, #0a0a0a 100%);
@@ -2233,7 +2254,6 @@ img {
         font-size: 2rem;
     }
 
-    /* Reseller responsive */
     .hero-reseller__inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2267,7 +2287,6 @@ img {
         font-size: 2.8rem;
     }
 
-    /* Support responsive */
     .support-grid__inner {
         grid-template-columns: 1fr 1fr;
     }
@@ -2363,7 +2382,6 @@ img {
         padding: 16px;
     }
 
-    /* Reseller responsive */
     .hero-reseller {
         padding: 120px 0 50px;
     }
@@ -2435,7 +2453,6 @@ img {
         font-size: 1rem;
     }
 
-    /* Support responsive */
     .support-grid__inner {
         grid-template-columns: 1fr;
         max-width: 400px;
@@ -2617,7 +2634,6 @@ img {
         font-size: 2rem;
     }
 
-    /* Reseller responsive */
     .hero-reseller {
         padding: 110px 0 40px;
     }
@@ -2760,7 +2776,6 @@ img {
         font-size: 0.65rem;
     }
 
-    /* Support responsive */
     .support-hero {
         padding: 120px 0 40px;
     }
