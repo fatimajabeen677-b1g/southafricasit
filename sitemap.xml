@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Homepage -->
     <url>
         <loc>https://iptvsouthafricaofficial.co.za/</loc>
-        <lastmod>2026-09-01</lastmod>
+        <lastmod>2026-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- Reseller -->
     <url>
-        <loc>https://iptvsouthafricaofficial.co.za/reseller</loc>
-        <lastmod>2026-09-01</lastmod>
+        <loc>https://iptvsouthafricaofficial.co.za/reseller/</loc>
+        <lastmod>2026-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+
+    <!-- Support -->
     <url>
-        <loc>https://iptvsouthafricaofficial.co.za/support</loc>
-        <lastmod>2026-09-01</lastmod>
+        <loc>https://iptvsouthafricaofficial.co.za/support/</loc>
+        <lastmod>2026-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <!-- Blog / Updates Listing -->
+    <url>
+        <loc>https://iptvsouthafricaofficial.co.za/blog/</loc>
+        <lastmod>2026-09-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Article: How to Watch IPTV in South Africa -->
+    <url>
+        <loc>https://iptvsouthafricaofficial.co.za/how-to-watch-iptv-south-africa/</loc>
+        <lastmod>2026-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.postimg.cc/tCgZS4nD/watchiptvsouthafrica.png</image:loc>
+            <image:title>How to Watch IPTV in South Africa — Complete Beginner's Guide</image:title>
+        </image:image>
+    </url>
+
 </urlset>
