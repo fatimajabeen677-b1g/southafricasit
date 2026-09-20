@@ -29,7 +29,7 @@
     <!-- Blog / Updates Listing -->
     <url>
         <loc>https://iptvsouthafricaofficial.co.za/blog/</loc>
-        <lastmod>2026-09-19</lastmod>
+        <lastmod>2026-09-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -46,4 +46,18 @@
         </image:image>
     </url>
 
+    <!-- Blog Article: IPTV vs DStv -->
+    <url>
+        <loc>https://iptvsouthafricaofficial.co.za/iptv-vs-dstv-south-africa/</loc>
+        <lastmod>2026-09-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.postimg.cc/VkfHcS2h/IPTV-VS-DSTV.png</image:loc>
+            <image:title>IPTV vs DStv: What Real Users Say in South Africa</image:title>
+        </image:image>
+    </url>
+
 </urlset>
+
+
